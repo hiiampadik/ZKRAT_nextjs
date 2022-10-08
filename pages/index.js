@@ -15,7 +15,7 @@ export default function Home() {
   useEffect(() => {
     // 👇️ get global mouse coordinates
     const handleWindowMouseMove = event => {
-      console.log(event.screenX)
+      // console.log(event.screenX)
       setGlobalCoords({
         x: event.screenX,
         y: event.screenY,
@@ -44,7 +44,10 @@ export default function Home() {
       </Head>
 
       <main className={styles.main} style={{transform: `translate(${x}px, ${y}px)` }} onMouseMove={handleMouseMove}>
-        <div className={styles.homepageTitle}>
+
+      </main>
+
+      <div className={styles.homepageTitle}>
           <a href='https://instagram.com/zkrat.kolektiv'>
             <h1>@Zkrat.Kolektiv</h1>
           </a>
@@ -52,7 +55,6 @@ export default function Home() {
             Interactive Installations <br /> Visualizations
           </p>
         </div>
-      </main>
 
       <footer className={styles.footer}></footer>
     </div>

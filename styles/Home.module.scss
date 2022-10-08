@@ -9,6 +9,9 @@
   position: absolute;
   top: 0;
   left: 0;
+  @media only screen and (max-width: 600px) {
+    opacity: 0.6;
+  }
 }
 
 .homepageTitle {
@@ -19,10 +22,10 @@
   font-family: Syne, system-ui, -apple-system, "Open Sans", "Helvetica Neue",
     sans-serif;
   text-align: center;
-  width: 80vw;
+  width: 100vw;
 
-  animation-name     : blur;
-  animation-duration : 2s;
+  animation-name: blur;
+  animation-duration: 2s;
   animation-fill-mode: forwards;
 
   h1 {
@@ -30,27 +33,35 @@
     font-weight: 800;
     margin: 0;
     text-transform: uppercase;
-    filter: drop-shadow(0 0 0.5vw black)
+    filter: drop-shadow(0 0 0.5vw black);
   }
   p {
     font-size: 1vw;
     font-weight: 800;
     text-transform: uppercase;
-    filter: drop-shadow(0 0 0.5vw black)
-
+    filter: drop-shadow(0 0 0.5vw black);
   }
-  a{
+  a {
     transition: 0.4s;
   }
-  a:hover{
-   filter: blur(0.6vw) ;
+  a:hover {
+    filter: blur(0.6vw);
+  }
+
+  @media only screen and (max-width: 600px) {
+    h1 {
+      font-size: 6vw;
+    }
+    p {
+      font-size: 2vw;
+      margin: 0;
+    }
   }
 }
 
-
 @keyframes blur {
   from {
-       filter: blur(10vw);
+    filter: blur(10vw);
   }
 
   to {
