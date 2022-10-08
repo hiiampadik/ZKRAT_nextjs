@@ -1,0 +1,59 @@
+.main {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  background-image: url(../public/bg.png);
+  background-position: top left;
+  background-size: 100vh 100vh;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.homepageTitle {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Syne, system-ui, -apple-system, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  text-align: center;
+  width: 80vw;
+
+  animation-name     : blur;
+  animation-duration : 2s;
+  animation-fill-mode: forwards;
+
+  h1 {
+    font-size: 4vw;
+    font-weight: 800;
+    margin: 0;
+    text-transform: uppercase;
+    filter: drop-shadow(0 0 0.5vw black)
+  }
+  p {
+    font-size: 1vw;
+    font-weight: 800;
+    text-transform: uppercase;
+    filter: drop-shadow(0 0 0.5vw black)
+
+  }
+  a{
+    transition: 0.4s;
+  }
+  a:hover{
+   filter: blur(0.6vw) ;
+  }
+}
+
+
+@keyframes blur {
+  from {
+       filter: blur(10vw);
+  }
+
+  to {
+    filter: blur(0vw);
+  }
+}
