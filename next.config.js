@@ -1,10 +1,6 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
   reactStrictMode: true,
   swcMinify: true,
-  siteUrl: 'https://zkratkolektiv.com',
-  generateRobotsTxt: true,
 }
-
-export default nextConfig;
 
