@@ -1,75 +1,55 @@
-.main {
-  height: 100vh;
-  width: 100vw;
-  background-color: black;
-  background-image: url(../public/bg.png);
-  background-position: top left;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 0;
-  left: 0;
-  @media only screen and (max-width: 600px) {
-    opacity: 0.6;
-  }
-}
 
 .homepageTitle {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
-  width: 100vw;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
 
-  animation-name: blur;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-
-  h1 {
-    font-size: 4vw;
+  h1, p, a, .underline {
+    font-size: 10vw * 0.7;
     margin: 0;
-    text-transform: uppercase;
-    filter: drop-shadow(0 0 0.5vw black);
 
-    font-family: roc-grotesk-extrawide, sans-serif;
-    font-weight: 700;
+    font-family: Rader, sans-serif;
+    font-weight: bold;
     font-style: normal;
-  }
-  p {
-    font-size: 1vw;
-    font-weight: 800;
-    text-transform: uppercase;
-    filter: drop-shadow(0 0 0.5vw black);
+    line-height: 0.9em;
+    height: 0.9em;
+    font-feature-settings: "ss02";
 
-    font-family: roc-grotesk-extrawide, sans-serif;
-    font-weight: 600;
-    font-style: normal;
+    @media (max-width: 991px) {
+      font-size: 10vw;
+    }
   }
+
+  .underline, a {
+    position: relative;
+  }
+
+  .ig{
+    position: absolute;
+    right: -35px;
+    bottom: 0.3vw * 0.7;
+    font-size: 18px;
+    line-height: 0.9em;
+    height: 0.9em;
+    font-feature-settings: "ss11";
+
+    @media (max-width: 991px) {
+      bottom: 0.3vw;
+      font-size: 14px;
+      right: -25px;
+    }
+  }
+
   a {
-    transition: 0.4s;
-  }
-  a:hover {
-    filter: blur(0.6vw);
-  }
-
-  @media only screen and (max-width: 600px) {
-    h1 {
-      font-size: 6vw;
+    @media (hover: hover) {
+      &:hover {
+        opacity: 0.5;
+      }
     }
-    p {
-      font-size: 2vw;
-      margin: 0;
-    }
-  }
-}
-
-@keyframes blur {
-  from {
-    filter: blur(10vw);
-  }
-
-  to {
-    filter: blur(0vw);
   }
 }

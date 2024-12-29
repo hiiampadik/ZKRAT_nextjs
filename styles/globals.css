@@ -18,19 +18,15 @@ a {
   box-sizing: border-box;
 }
 
-
-@font-face {
-  font-family: "Syne";
-  src: url("/fonts/Syne-Bold.woff2") format("opentype");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
+body, main {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 @font-face {
-  font-family: "Syne";
-  src: url("/fonts/Syne-ExtraBold.woff2") format("opentype");
-  font-weight: 800;
+  font-family: Rader;
+  src: url(../public/fonts/PPRader-Bold.woff2);
+  font-weight: bold;
   font-style: normal;
-  font-display: swap;
 }
