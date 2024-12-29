@@ -1,4 +1,10 @@
 
+@keyframes appear {
+  to {
+    opacity: 1;
+  }
+}
+
 .homepageTitle {
   text-align: center;
   width: 100%;
@@ -8,6 +14,11 @@
   align-items: center;
   justify-content: center;
   user-select: none;
+
+  opacity: 0;
+  animation: appear 1s ease-out forwards;
+  animation-delay: 0.5s;
+  animation-iteration-count: 1;
 
   h1, p, a, .underline {
     font-size: 10vw * 0.7;
