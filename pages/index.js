@@ -13,7 +13,7 @@ export default function Home() {
                 <span className={styles.ig}>IG</span>
               </a>
               <p>
-                  Interactive installations
+                  Interactive Installations
               </p>
               <p>
                   Visualizations
